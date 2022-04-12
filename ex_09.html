@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="EUC-KR">
+	<title>Insert title here</title>
+	</head>
+	<body>
+		<p>목차</p>
+		<ol>
+			<li>
+				<a href="ex_01.html">h1~h6</a>
+			</li>
+			<li>
+				<a href="ex_02.html">p br blockqute q strong em</a>
+			</li>
+			<li>
+				<a href="ex_03.html">ol li, ul li</a>
+			</li>
+			<li>
+				<a href="ex_04.html">img a</a>
+			</li>
+			<li>
+				<a href="ex_05.html">기본 테이블(table)태그</a>
+			</li>
+			<li>
+				<a href="ex_06.html">테이블 셀 합치기</a>
+			</li>
+			<li>
+				<a href="ex_07.html">테이블 thead tbody</a>
+			</li>
+			<li>
+				<a href="ex_08.html">모집분야 예제2</a>
+			</li>
+			<li>
+				<a href="ex_09.html">form 태그</a>
+			</li>
+		</ol>
+		<hr>
+		<h1>html5</h1>
+		<h2>기본태그</h2>
+		<h3>form 태그</h3>
+
+		<!-- <input type="text" id=“label for 속성에서 부르는 닉네임” name=“user id” value=“실제값” placeholder=“클릭하면 없어짐"> -->
+		<form action="" method="">
+			<input type="text" name="hp" value="010-3333-2222">
+			<input type="text" name="home" value="">
+			<br>
+			<label for="hp">전화번호</label>
+			<!-- label의 고유 속성 : for=""을 작성하면 해당 글자를 클릭시 input안에 id 값이 같은 곳으로 마우스 커서가 자동 움직인다 -->
+			<input id="hp" type="text" name="" value="" placeholder="전화번호">
+			<!-- id= input의 고유 이름이고 (서버 전송시 의미 없음 / 태그를 구분한느 속성
+			name= 서버로 데이터를 보낼때 사용하는 이름 (서버 전송시 사용 -->
+			<label for="nick">닉네임</label>
+			<input id="nick" type="text" name="" value="" placeholder="닉네임">
+			
+			<br>
+			<br>
+			<!-- password = 비밀번호 입력(입력내용이 안보임) -->
+			<label for="txt-password">password</label>
+			<input id="txt-password" type="password" placeholder="문자 숫자" >
+			<br>
+			<!-- hidden = 사용자에게 보이지 않음 -->
+			<input type="hidden">
+			<input type="hidden" name="seq" value="3">
+			<!-- 사용자에게 보이지는 않지만 value 값을 같이 데이터를 받아야할 때 hidden 이라는 type 값을 넣으면
+			seq라는 name으로 3이라는 vlaue의 값을 가지고 서버에 데이터가 전송이 된다. -->
+			
+			<br>
+			<!-- file=파일첨부 -->
+			<label for="txt-file">파일첨부</label>
+			<input id="txt-file" type="file">
+			
+			<br>
+			<!-- check 박스는 다중 선택 가능, radio는 하나만 선택 가능 -->
+			<label for="chk-book">독서</label>
+			<input id="chk-book" type="checkbox" name="hobby" value="">
+			
+			<label for="chk-music">음악</label>
+			<input id="chk-music" type="checkbox" name="hobby">
+			
+			<label for="chk-trip">여행</label>
+			<!-- checked="checked" : 기본 체크 값 설정시 사용 -->
+			<input id="chk-trip" type="checkbox" checked="checked" name="hobby">
+			
+			<br>
+			<label for="chk-dog">개</label>
+			<input id="chk-dog" type="checkbox" name="pet" value="dog" checked="checked">
+			<label for="chk-cat">고양이</label>
+			<input id="chk-cat" type="checkbox" name="pet" value="cat">
+			<label for="chk-bird">새</label>
+			<input id="chk-bird" type="checkbox" name="pet" value="bird"> 
+			
+			<br>
+			<label for="rdo-apple">사과</label>
+			<input id="rdo-apple" type="radio" name="fruit" value="apple">
+			<label for="rdo-grape">포도</label>
+			<input id="rdo-grape" type="radio" name="fruit" value="grape">
+			<label for="rdo-orange">오렌지</label>
+			<input id="rdo-orange" type="radio" name="fruit" value="orange">			
+			
+			<br>
+			<label for="rdo-m1">1월</label>
+			<input id="rdo-m1" type="radio" name="month" value="1">
+			<label for="rdo-m2">2월</label>
+			<input id="rdo-m2" type="radio" name="" value="">
+			<label for="rdo-m3">3월</label>
+			<input id="rdo-m3" type="radio" name="" value="">
+			
+			<br>
+			<label for="sel-telecom">통신사</label>
+			<select id="sel-telecom" name="telecom">
+			<!-- select안의 option은 name이라는 속성을 따로 쓰지 않고 select 영역을 묶음으로 한번 사용한다. -->
+				<option value="">통신사를 선택해주세요.</option>
+				<option value="SKT" selected="selected">SKT</option>
+				<option value="KT">KT</option>
+				<option value="LGU">LGU</option>
+				<option value="etc">기타</option>
+			</select>
+			
+			<br>
+			<!-- rows 속성과 cols 속성을 이용하여 textarea 요소의 크기를 자유롭게 지정할 수 있습니다. -->
+			<!-- textarea는 value 값을 속성으로 가지고 있지 않아서 태그 사이에 글자를 써야함 -->
+			<textarea name="content" rows="5" cols="30">안녕하세요 text 창입니다.</textarea>
+			
+			<br>
+			<!-- fieldset 요소는 form 요소와 관련된 데이터들을 하나로 묶어주는 역할 -->
+			<!-- legend 요소는 fieldset 요소 안에서만 사용할 수 있으며, fieldset 요소의 제목 -->
+			<fieldset>
+				<legend>개인 정보</legend>
+				<label for="u-id">id</label>
+				<input id="u-id" type="text" name="userid" placeholder="영어+숫자">
+				<label for="u-pw">password</label>
+				<input id="u-pw" type="password" name="userpassword" placeholder="영어+숫자">
+			</fieldset>
+			
+			
+			<br>
+			<!-- button의 역할 : 데이터를 보내는 역할과 다른 프로그램 실행시키는 역할 -->
+			<!-- form으로 묶여 있는 것까지 button이 인식 -->
+			<!-- <button type="submit">전송</button> -->
+			<!-- <button type="button">팝업창 호출</button> -->
+			<!-- <button type="reset">초기화</button> -->
+			<button type="submit">회원가입</button>
+			
+		</form>
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>
